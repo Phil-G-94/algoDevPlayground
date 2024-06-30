@@ -107,3 +107,55 @@ Quadratic time complexity is ok. Quadratic space complexity is not.
 ### HELP:
 
 https://www.reddit.com/r/computerscience/comments/s7h2vc/can_someone_explain_to_me_big_o_notation_like_im/#:~:text=The%20focus%20of%20Big%20O,slowest%20part%20of%20an%20algorithm
+
+### Big-O: The Time/Space Complexity of Objects {} and their methods
+
+Objects are not ordered.
+
+Insert, Remove, Access all have O(1) | constant complexity;
+
+Search O(n) | linear; worst case, you may have to search _all_ the properties to find the one you're looking for. the more properties, the longer it will take.
+
+Object.keys(), Object.values(), Object.entries() all have O(n) linear TC.
+
+### Big-O: The Time/Space Complexity of Arrays [] and their methods
+
+Arrays are ordered (zero-indexed)
+
+insert / remove element at end of array - i.e. `.push()` | also pop - O(1) constant
+
+insert / remove at beginning of the array - i.e. `.shift()` or `.unshift()` | also concat, splice, slice - O(n) linear, because the index has to be reset for every element in the array
+
+access - O(1) constant - since ordered, there is no difference between `i[0]` and `i[100000]`
+search - O(n) linear
+
+forEach / map / filter / reduce - O(n) linear
+
+If, for example, your solution includes:
+
+```
+.forEach( () => {
+    for (let i = 0; i <= x; i++) {
+
+    }
+} )
+
+```
+
+your T/S complexity will be `quadratic`, as you've solved with a nested loop
+
+## Math Algorithms
+
+### Fibonacci sequence
+
+### Factorial of a number
+
+### Prime number
+
+### Power of two
+
+### Recursion
+
+### Fibonacci w/ recursion
+
+### Factorial of a number w/ recursion
