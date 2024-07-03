@@ -146,9 +146,9 @@ your T/S complexity will be `quadratic`, as you've solved with a nested loop
 
 ## Math Algorithms
 
-### Fibonacci sequence
+### [Fibonacci sequence](algoDevPlayground/mathAlgorithms/fibonacci.js)
 
-### Factorial of a number
+### [Factorial of a number](algoDevPlayground/mathAlgorithms/fibonacci.js)
 
 ### Prime number
 

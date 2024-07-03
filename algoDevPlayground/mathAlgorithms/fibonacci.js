@@ -34,3 +34,4 @@ function fibonacci(n) {
 
 console.log(fibonacci(4));
 
+// Big-O: O(n) - linear
