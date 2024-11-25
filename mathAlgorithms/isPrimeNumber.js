@@ -61,8 +61,7 @@ function optimisedIsPrimeNumber(n) {
 /*
 
 Because we check based on the square root - `Math.sqrt()` -
-we are working checking a much smaller number range than if we worked with a
-natural number.
+we are checking a much smaller number range than if we worked with a natural number.
 
 if n = 100, Math.sqrt(n) = 10
 
