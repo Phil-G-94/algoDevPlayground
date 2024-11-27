@@ -1,5 +1,9 @@
 [Companion Repo](/varDataAlgorithms/AlgoCasts/)
 
+### using `jest` to watch files
+
+`jest dirname/filename.extension --watch`
+
 ### Using the `debugger` statement
 
 place `debugger` statement inside code, run `node inspect [file name]` in terminal to enter debugger
