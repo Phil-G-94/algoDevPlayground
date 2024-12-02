@@ -2,7 +2,7 @@
 
 ### using `jest` to watch files
 
-`jest dirname/filename.extension --watch`
+`jest dirname/testFileName.extension --watch`
 
 ### Using the `debugger` statement
 
