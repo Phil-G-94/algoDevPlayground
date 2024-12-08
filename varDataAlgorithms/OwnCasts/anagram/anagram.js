@@ -4,10 +4,9 @@
 // consider capital letters to be the same as lowercase
 
 // Examples
-// anagram("rail safe", "fairly tales") => true
+// anagram("rail safety", "fairly tales") => true
 // anagram("Hi there", "Bye there") => false
 // anagrams("RAIL! SAFETY!", "FAIRY TALES") => true
-
 
 const sanitise = (string) => string.replace(/[^\w]/g, "").toLowerCase();
 
@@ -30,6 +29,7 @@ const anagram = (stringA, stringB) => {
     // return false
     if (Object.keys(charMapA).length !== Object.keys(charMapB).length) return false;
 
+    // iterate over one frequency map and check if all its chars match with other frequency map
     for (let char in charMapA) {
         return charMapA[char] === charMapB[char]; // return true if all chars match
     }
@@ -38,12 +38,41 @@ const anagram = (stringA, stringB) => {
 
 };
 
-
-console.log(anagram("Hello", "lloHe"));
-
 module.exports = anagram;
 
 /* SOLUTIONS */
+
+/* #0 */
+
+// const sanitise = (string) => string.replace(/[^\w]/g, "").toLowerCase();
+
+// const buildCharMap = (str) => {
+//     const charMap = {};
+
+//     for (const char of sanitise(str)) {
+//         charMap[char] = (charMap[char] || 0) + 1;
+//     }
+
+//     return charMap;
+// };
+
+// const anagram = (stringA, stringB) => {
+
+//     const charMapA = buildCharMap(stringA);
+//     const charMapB = buildCharMap(stringB);
+
+//     // don't have the same number of chars
+//     // return false
+//     if (Object.keys(charMapA).length !== Object.keys(charMapB).length) return false;
+
+//     // iterate over one frequency map and check if all its chars match with other frequency map
+//     for (let char in charMapA) {
+//         return charMapA[char] === charMapB[char]; // return true if all chars match
+//     }
+
+//     // false otherwise, implicit return
+
+// };
 
 /* #1 */
 
@@ -145,3 +174,24 @@ module.exports = anagram;
 //     return Object.values(charMap).every(count => count === 0);
 
 // };
+
+/* #3 */
+
+// const sanitiseAndSort = (str) => str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+
+// const anagram = (stringA, stringB) => {
+
+//     const sanitisedA = sanitiseAndSort(stringA);
+//     const sanitisedB = sanitiseAndSort(stringB);
+
+//     if (sanitisedA.length !== sanitisedB.length) { return false; }
+
+//     return sanitisedA === sanitisedB;
+
+// };
+
+
+// console.log(anagram("Hello", "lloHe"));
+
+// module.exports = anagram;
+
