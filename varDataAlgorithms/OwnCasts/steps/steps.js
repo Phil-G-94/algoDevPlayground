@@ -13,6 +13,8 @@
 // "## "
 // "###"
 
+/*
+
 const steps = (n) => {
 
     for (let row = 0; row < n; row++) {
@@ -28,6 +30,34 @@ const steps = (n) => {
         }
         console.log(stair);
     }
+};
+
+*/
+
+const steps = (n, row = 0, stairs = "") => {
+
+    // must assign a default value to the `row` arg in case that value is not passed in with our function call
+
+    /* base cases */
+
+    if (n === row) return;
+
+    if (n === stairs.length) {
+        console.log(stairs); // log `stairs`
+        return steps(n, row + 1); // increment `row` argument recursively
+    };
+
+    // if (stairs.length <= row) {
+    //     stairs += "#";
+    // } else {
+    //     stairs += " ";
+    // }
+
+    // shorten above to ternary expression
+    const add = stairs.length <= row ? "#" : " ";
+
+    // recursive function call
+    steps(n, row, stairs + add);
 };
 
 steps(4);
@@ -50,5 +80,30 @@ const steps = (n) => {
     }
 
 };
+
+*/
+
+/* SUCCEEDS
+
+// ITERATIVE
+
+const steps = (n) => {
+
+    for (let row = 0; row < n; row++) {
+        let stair = "";
+
+        for (let column = 0; column < n; column++) {
+
+            if (column <= row) {
+                stair += "#";
+            } else {
+                stair += " ";
+            }
+        }
+        console.log(stair);
+    }
+};
+
+steps(4);
 
 */
