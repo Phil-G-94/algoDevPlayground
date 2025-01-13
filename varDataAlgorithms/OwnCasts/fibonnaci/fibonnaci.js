@@ -14,6 +14,9 @@ const fib = (n) => {
 
     if (n < 2) return n;
 
+    // keep calling fib(n - 1) + fib (n - 2), until their sum < 2
+    // keep adding the result of those calls where sum < 2 until
+    // it equals a discrete number that is nth in the fibonnaci sequence
     return fib(n - 1) + fib(n - 2);
 };
 
