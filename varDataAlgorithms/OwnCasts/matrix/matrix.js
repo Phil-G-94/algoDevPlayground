@@ -19,7 +19,8 @@
 
 const matrix = (n) => {
 
-    let resultsArray = Array.from({ length: n }, () => []);
+    const results = Array.from({ length: n }, () => []);
+
     let counter = 1;
 
     let startRow = 0;
@@ -28,43 +29,49 @@ const matrix = (n) => {
     let startCol = 0;
     let endCol = n - 1;
 
-    while (startCol <= endCol && startRow <= endRow) {
 
-        // responsible for top row
+    while (startRow <= endRow && startCol <= endCol) {
+
+        // top row
+
         for (let i = startCol; i <= endCol; i++) {
-            resultsArray[startRow][i] = counter;
+            results[startRow][i] = counter;
             counter++;
         }
-        startRow++;
-        // resultsArray = [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ]
 
-        // right col
+        // increment start row from 0 to 1, since we just completed 0 with the above for loop
+        startRow++;
+
+        // right column
+
         for (let i = startRow; i <= endRow; i++) {
-            resultsArray[i][endCol] = counter;
+            results[i][endCol] = counter;
             counter++;
         }
         endCol--;
-        // resultsArray = [ [ 1, 2, 3 ], [ 6, 7, 4 ], [ 9, 8, 5 ] ];
 
         // bottom row
+
         for (let i = endCol; i >= startCol; i--) {
-            resultsArray[endRow][i] = counter;
+            results[endRow][i] = counter;
             counter++;
         }
+
         endRow--;
-        // resultsArray = [ [ 1, 2, 3 ], [ 10, 9, 4 ], [ 7, 6, 5 ] ]
 
         // left column
+
         for (let i = endRow; i >= startRow; i--) {
-            resultsArray[i][startCol] = counter;
+            results[i][startCol] = counter;
             counter++;
         }
+
         startCol++;
-        // resultsArray = [ [ 1, 2, 3 ], [ 8, 9, 4 ], [ 7, 6, 5 ] ]
 
     }
 
-    return resultsArray;
+    return results;
+
 };
 
 console.log(matrix(3));
