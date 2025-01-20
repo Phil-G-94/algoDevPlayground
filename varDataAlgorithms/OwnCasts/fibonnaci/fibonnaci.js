@@ -97,42 +97,42 @@ const fib = (n) => {
 
         const memoize = (fn) => {
 
-    const cache = {};
+            const cache = {};
 
-    // represents the fn we pass in to memoize()
-    return function (...args) {
+            // represents the fn we pass in to memoize()
+            return function (...args) {
 
-        // `...args` to allow for unknown no. of arguments
+                // `...args` to allow for unknown no. of arguments
 
-        // checks if cache obj already contains any of the args
-        // if so, return the value of the arg
-        if (cache[args]) {
-            return cache[args];
-        }
+                // checks if cache obj already contains any of the args
+                // if so, return the value of the arg
+                if (cache[args]) {
+                    return cache[args];
+                }
 
-        // making it past the `if` means we've never called the fn with that arg before, that is - that value hasn't been computed
+                // making it past the `if` means we've never called the fn with that arg before, that is - that value hasn't been computed
 
-        const result = fn.apply(this, args); // whenever you call a function with an arr of arguments (i.e. args) we have to use the `apply()` helper
+                const result = fn.apply(this, args); // whenever you call a function with an arr of arguments (i.e. args) we have to use the `apply()` helper
 
-        // store the result of the above computation into our cache and return it
-        // the next time the fn is called with the same argument as previously computed it will return within our `if` check
-        cache[args] = result;
+                // store the result of the above computation into our cache and return it
+                // the next time the fn is called with the same argument as previously computed it will return within our `if` check
+                cache[args] = result;
 
-        return result;
-    };
-};
+                return result;
+            };
+        };
 
-const slowFib = (n) => {
+        const slowFib = (n) => {
 
-    // base case
+            // base case
 
-    if (n < 2) return n;
+            if (n < 2) return n;
 
-    return fib(n - 1) + fib(n - 2); // recursively call the memoized version of the fib function
+            return fib(n - 1) + fib(n - 2); // recursively call the memoized version of the fib function
 
-};
+        };
 
-// call our memoize function, passing our recursive fib function as the arg
-const fib = memoize(slowFib);
+        // call our memoize function, passing our recursive fib function as the arg
+        const fib = memoize(slowFib);
 
 */
