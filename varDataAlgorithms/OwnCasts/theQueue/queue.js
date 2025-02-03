@@ -1,3 +1,7 @@
+/*
+    queues follow first-in-first-out principle
+*/
+
 class Queue {
     constructor() {
         this.data = [];
