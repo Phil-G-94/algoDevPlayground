@@ -5,3 +5,5 @@ const cleanString = (str) => {
 const anagram = (strA, strB) => {
   return cleanString(strA) === cleanString(strB);
 };
+
+module.exports = anagram;
