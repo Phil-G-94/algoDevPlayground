@@ -5,5 +5,4 @@ describe("isWilsonPrime", function () {
     expect(isWilsonPrime(5)).toBe(true);
     expect(isWilsonPrime(3)).toBe(false);
   });
-})
-
+});

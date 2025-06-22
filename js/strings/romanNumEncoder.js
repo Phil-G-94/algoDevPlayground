@@ -1,5 +1,4 @@
 function romanNumEncoder(num) {
-
   let result = "";
 
   const map = new Map();
@@ -21,16 +20,13 @@ function romanNumEncoder(num) {
   if (num <= 0 || num > 3999) return `No Roman Numeral representation`;
 
   for (const [key, value] of map) {
-
     while (num >= value) {
       num -= value;
       result += key;
     }
-
   }
 
   return result;
-
 }
 
 module.exports = romanNumEncoder;

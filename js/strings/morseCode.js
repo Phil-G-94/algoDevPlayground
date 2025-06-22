@@ -38,14 +38,12 @@ const MORSE_CODE = {
 };
 
 function decodeMorseCode(morseCode) {
-
   morseCode = morseCode.trim(); // remove all whitespace
 
   const decoded = [];
   const words = morseCode.split("   ");
 
   for (let word of words) {
-
     const chars = word.split(" ");
 
     let decodedWord = "";
@@ -58,6 +56,6 @@ function decodeMorseCode(morseCode) {
   }
 
   return decoded.join("");
-};
+}
 
 console.log(decodeMorseCode("... --- ..."));
