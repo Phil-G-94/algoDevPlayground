@@ -55,7 +55,10 @@ function decodeMorseCode(morseCode) {
     decoded.push(decodedWord);
   }
 
-  return decoded.join("");
+  return decoded.join(" ");
 }
 
+module.exports = decodeMorseCode;
+
 console.log(decodeMorseCode("... --- ..."));
+console.log(decodeMorseCode(".... . -.--   .--- ..- -.. ."));
