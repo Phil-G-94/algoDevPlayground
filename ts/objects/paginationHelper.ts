@@ -60,7 +60,3 @@ class PaginationHelper {
 }
 
 const pagHelper = new PaginationHelper(["a", "b", "c", "d", "e", "f"], 4);
-
-// pagHelper.itemCount();
-// pagHelper.pageCount();
-console.log(pagHelper.pageItemCount(1));
