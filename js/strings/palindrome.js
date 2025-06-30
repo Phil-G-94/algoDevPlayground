@@ -3,7 +3,7 @@ function isPalindrome(str) {
   const revLowRegStr = lowRegStr.split("").reverse().join("");
 
   return lowRegStr === revLowRegStr;
-};
+}
 
 module.exports = isPalindrome;
 

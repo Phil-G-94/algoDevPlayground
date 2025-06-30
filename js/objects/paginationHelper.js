@@ -18,7 +18,6 @@ class PaginationHelper {
   // this method should return -1 for pageIndex values that are out of range
 
   pageItemCount(pageIndex) {
-
     if (pageIndex < 0 || pageIndex >= this.pageCount()) {
       return -1;
     }
@@ -32,7 +31,6 @@ class PaginationHelper {
 
       return leftoverItems;
     }
-
   }
 
   // determines what page an item is on. Zero based indexes

@@ -14,7 +14,6 @@ describe("pagHelper", function () {
   it("should return the number of items of the current page", function () {
     expect(pagHelper.pageItemCount(-1)).toBe(-1);
     expect(pagHelper.pageItemCount(2)).toBe(-1);
-
   });
 
   it("should return the correct page index for a valid item index", function () {
