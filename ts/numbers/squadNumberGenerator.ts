@@ -10,9 +10,16 @@ https://www.codewars.com/kata/5d62961d18198b000e2f22b3/solutions/javascript
 
 */
 
+/**
+ *
+ * @param {number[]} squad
+ * @param {number} n
+ * @returns {(number|null)}
+ */
+
 const squad = [12, 15, 32, 5, 6, 77, 99];
 
-const generateNumber = (squad: number[], n: number) => {
+const generateNumber = (squad: number[], n: number): number | null => {
   if (!squad.includes(n)) return n;
 
   for (let a = 1; a <= 9; a++) {

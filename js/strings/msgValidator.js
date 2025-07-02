@@ -17,3 +17,4 @@ const msgValidator = (inputStr) => {
 
   return totalLength === inputStr.length;
 };
+module.exports = msgValidator;
