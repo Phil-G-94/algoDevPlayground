@@ -5,5 +5,6 @@ describe("anagram", function () {
     expect(anagram("silent", "listen")).toBe(true);
     expect(anagram("doom", "moody")).toBe(false);
     expect(anagram("silent", "eNlIST")).toBe(true);
+    expect(anagram("anagram", "nag a ram")).toBe(true);
   });
 });

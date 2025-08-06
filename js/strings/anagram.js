@@ -1,5 +1,5 @@
 const cleanString = (str) => {
-  return str.replace(/[^\w]/, "").toLowerCase().split("").sort().join("");
+  return str.replace(/[^\w]+/gm, "").toLowerCase().split("").sort().join("");
 };
 
 const anagram = (strA, strB) => {
